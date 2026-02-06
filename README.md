@@ -5,7 +5,7 @@
 
 ### builbo installer
 
-Rhis repo contains the installer for the builbo cli of the buildbox project.
+Rhis repo contains the installer for the [builbo cli](https://github.com/TheBuildBox/buildbox/blob/main/cli/builbo) of the [buildbox](https://github.com/TheBuildBox/buildbox)  project.
 
 ## install builbo (on macOS or Linux)
 
