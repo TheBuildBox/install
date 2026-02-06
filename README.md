@@ -1,4 +1,6 @@
 
+[![Build Status](https://github.com/TheBuildbox/install/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/TheBuildBox/install/actions)
+
 [![GPL license](https://img.shields.io/badge/license-GPL-blue.svg)](http://opensource.org/licenses/GPL)
 
 ### builbo installer
