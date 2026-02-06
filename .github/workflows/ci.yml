@@ -1,0 +1,47 @@
+name: CI
+on:
+  push:
+    tags:
+      - v*
+    branches:
+      - main
+      - release-*
+  workflow_dispatch:
+  pull_request:
+    types: [opened, synchronize]
+    branches:
+      - main
+      - release-*
+
+jobs:
+
+  test:
+    name: test and run
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+
+    steps:
+
+    - name: Set up Go
+      uses: actions/setup-go@v6
+      with:
+        go-version: 'stable'
+      id: go
+
+    - name: Check out code
+      uses: actions/checkout@v6
+      with:
+        fetch-depth: 1
+
+    - name: run checks
+      run: make check
+      shell: bash
+
+    - name: run install and validate
+      run: |
+         ./install.sh
+         type builbo
+      shell: bash
+
