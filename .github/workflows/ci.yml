@@ -34,10 +34,11 @@ jobs:
       uses: actions/checkout@v6
       with:
         fetch-depth: 1
-    - name: Install dependencies (shellcheck)
+    - name: Install dependencies (shellcheck) macOS
       if: matrix.os == 'macos-latest'
       run: |
         brew install shellcheck
+    - name: Install dependencies (shellcheck) Ubuntu
       if: matrix.os == 'ubuntu-latest'
       run: |
         sudo apt update
