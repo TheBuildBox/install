@@ -1,3 +1,6 @@
+
+[![GPL license](https://img.shields.io/badge/license-GPL-blue.svg)](http://opensource.org/licenses/GPL)
+
 ### builbo installer
 
 Rhis repo contains the installer for the builbo cli of the buildbox project.
